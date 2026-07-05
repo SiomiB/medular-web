@@ -1,0 +1,174 @@
+.ai-agent-home {
+  padding: 100px 0 80px;
+  background: var(--bg-warm);
+}
+
+.ai-chat-wrap {
+  max-width: 880px;
+  margin: 48px auto 0;
+}
+
+.ai-feature-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.ai-feature-row > div {
+  text-align: center;
+}
+
+.ai-feature-row .k {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.ai-feature-row .v {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .ai-agent-home {
+    padding: 64px 0;
+  }
+
+  .ai-feature-row {
+    gap: 22px;
+  }
+
+  .ai-feature-row > div {
+    width: 100%;
+  }
+}
+
+:host {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ai-card,
+.ai-panel,
+.ai-chat,
+.ai-message,
+.ai-bubble,
+.ai-response,
+.mini-table,
+.chart-card {
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.mini-table {
+  width: 100%;
+}
+
+.mini-table * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ai-agent-grid,
+  .ai-card,
+  .ai-panel,
+  .ai-chat {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+.ai-chat-frame,
+.ai-chat-body,
+.ai-msg,
+.ai-bubble,
+.ai-data-block,
+.ai-bar-chart,
+.ai-bar-row {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.ai-bubble {
+  overflow: hidden;
+}
+
+.ai-data-block {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ai-bar-row {
+  display: grid;
+  grid-template-columns: minmax(72px, auto) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.track {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.val {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .ai-chat-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ai-chat-frame {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .ai-chat-body {
+    padding-inline: 12px;
+  }
+
+  .ai-msg {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .ai-bubble {
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 16px;
+  }
+
+  .ai-data-block {
+    padding: 14px;
+  }
+
+  .ai-bar-row {
+    grid-template-columns: minmax(68px, 1fr) minmax(28px, 44px) auto;
+    gap: 8px;
+  }
+
+  .lbl,
+  .val {
+    font-size: 10px;
+  }
+}

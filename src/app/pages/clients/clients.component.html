@@ -1,0 +1,389 @@
+<!-- HERO -->
+<header class="hero-compact">
+  <div class="container">
+    <div class="breadcrumb">
+      <a routerLink="/">MEDULAR</a><span class="sep">/</span><span>Clientes</span>
+    </div>
+    <span class="eyebrow">casos extendidos por sector · clientes bajo NDA</span>
+    <h1 class="display">Cómo se ve MEDULAR <em>en operación real</em>.</h1>
+    <p class="sub">Compartimos casos de uso anonimizados — el cliente exacto se mantiene bajo NDA — con métricas operativas reales de implementaciones productivas. Esto es lo que se ve cuando MEDULAR opera para una empresa de tu sector.</p>
+  </div>
+</header>
+
+<!-- BIG STATS aggregated -->
+<section class="bigstats-section">
+  <div class="container">
+    <div class="bigstats-head">
+      <div class="left">
+        <span class="eyebrow">cartera agregada</span>
+        <h2>Operando para <em>cartera B2B enterprise mexicana</em>.</h2>
+      </div>
+      <div class="meta">cifras agregadas · cartera activa<br/>actualización jun 2026</div>
+    </div>
+    <div class="bigstats-grid">
+      <div class="bigstat">
+        <div class="meta">cartera</div>
+        <div class="figure">6<em>+</em></div>
+        <div class="unit">sectores en operación</div>
+        <div class="desc">Manufactura, retail, logística, aerolíneas, hotelería, salud/banca</div>
+      </div>
+      <div class="bigstat">
+        <div class="meta">cobertura</div>
+        <div class="figure">35<em>+</em></div>
+        <div class="unit">sitios activos · México</div>
+        <div class="desc">Plantas, sucursales, CEDIs, hoteles, hospitales</div>
+      </div>
+      <div class="bigstat">
+        <div class="meta">empleados</div>
+        <div class="figure">40<em>k+</em></div>
+        <div class="unit">cuadrados quincenalmente</div>
+        <div class="desc">Operación bidireccional con nómina enterprise</div>
+      </div>
+      <div class="bigstat">
+        <div class="meta">retención</div>
+        <div class="figure">100<em>%</em></div>
+        <div class="unit">clientes que pasaron de piloto</div>
+        <div class="desc">Pilotos productivos · conversión a contrato anual</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 1: MANUFACTURA -->
+<section style="padding: 100px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 01</span>
+      <span>manufactura</span>
+      <span class="line"></span>
+      <span>caso · grupo industrial alimentos</span>
+    </div>
+    <div class="section-head">
+      <span class="eyebrow">vertical 01 · manufactura</span>
+      <h2 class="display">Grupo industrial alimentos · <em>8 plantas · 4,500 empleados</em>.</h2>
+      <p class="lede">Una de las primeras implementaciones productivas. Grupo manufacturero del sector alimentos con plantas distribuidas en MX-norte, MX-bajío y MX-centro. Stack de checadores heterogéneo (ZKTeco + Suprema + huella legacy en una planta), SAP HCM como nómina madre, sindicato activo, OT recurrente por estacionalidad.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px;">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
+        <div class="head-quote">
+          <p class="q">"El problema no era el checador. El problema era que cada planta nos mandaba un formato distinto y RH se tardaba 4 días en cuadrar la quincena."</p>
+          <div class="attr">— Director de Capital Humano · sector alimentos · 4.5k empleados</div>
+        </div>
+      </div>
+      <div class="mcc-grid">
+        <div class="mcc-card">
+          <div class="ix"><span class="num">A</span> situación previa</div>
+          <h4>4 días por quincena conciliando</h4>
+          <p>3 personas de RH dedicadas a recibir archivos de las 8 plantas, abrirlos en Excel, cuadrar con SAP a mano. Discrepancias detectadas días después del pago. Juicios laborales perdidos por incapacidad de demostrar horas.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">B</span> implementación</div>
+          <h4>Piloto 90 días · 2 plantas</h4>
+          <p>Conectamos primero las dos plantas con mayor exposición (MTY-3 + QRO). Identity resolution con 3,200 empleados activos. Push automático a SAP CPI vía OData. Vault NOM-151 desde el día uno.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">C</span> producción</div>
+          <h4>Roll-out a 8 plantas en 7 meses</h4>
+          <p>Después del piloto exitoso, expandimos a las 6 plantas restantes a ritmo de una por mes. Cada planta nueva: 5 días hábiles de onboarding. SAP HCM como único destino. Reportes STPS-ready automáticos.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">D</span> impacto medido</div>
+          <h4>4 días → 4 horas por quincena</h4>
+          <p>Reducción de 96% en tiempo de conciliación. 2 personas de RH liberadas para trabajo estratégico. Cero juicios laborales perdidos en últimos 6 meses por falta de evidencia. Auditoría interna positiva.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 2: RETAIL -->
+<section style="background: var(--bg-warm); padding: 100px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 02</span>
+      <span>retail</span>
+      <span class="line"></span>
+      <span>caso · cadena retail textil</span>
+    </div>
+    <div class="section-head">
+      <span class="eyebrow">vertical 02 · retail</span>
+      <h2 class="display">Cadena retail textil · <em>240 sucursales · 5,800 empleados</em>.</h2>
+      <p class="lede">Cadena nacional de retail textil con sucursales distribuidas en plazas comerciales y calles. Operación con alta rotación (30% anual), conectividad intermitente en sucursales remotas, biométricos por sucursal con marcas mezcladas, nómina partida entre SAP HCM (corporativo) y CONTPAQi (operaciones).</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px;">
+      <div class="head-quote">
+        <p class="q">"Nuestro reto no era tecnológico. Era que si una sucursal en Tuxtla perdía red por 3 días, todos los marcajes se iban al limbo. Y entonces no podíamos sustentar nada en juicio."</p>
+        <div class="attr">— CIO · cadena retail textil · 5.8k empleados · 240 sucursales</div>
+      </div>
+      <div class="mcc-grid">
+        <div class="mcc-card">
+          <div class="ix"><span class="num">A</span> situación previa</div>
+          <h4>Pérdida de datos por conectividad</h4>
+          <p>10-15% de las sucursales con conectividad inestable. Marcajes perdidos cuando la red caía. Reconstrucción manual con bitácoras escritas a mano. Inspecciones STPS resueltas pagando multa de manera preventiva.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">B</span> implementación</div>
+          <h4>Edge collector con store-and-forward</h4>
+          <p>Implementamos edge collector ligero en cada sucursal. Buffer local de 30 días. Sincronización oportunista cuando hay red. Identity resolution agregada al ERP de RH. Push partido entre SAP HCM (corporativo) y CONTPAQi (operaciones).</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">C</span> producción</div>
+          <h4>240 sucursales en 4 meses</h4>
+          <p>Despliegue por regiones: norte (60 sucursales) → centro (90) → sur (60) → bajío (30). 5 sucursales por día en promedio. Capacitación remota de gerentes de sucursal en 1 hora por unidad.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">D</span> impacto medido</div>
+          <h4>Cero datos perdidos · 18 meses</h4>
+          <p>Desde implementación: 0 marcajes perdidos en sucursales con conectividad inestable. Reducción de 80% en quejas internas de empleados por discrepancias de pago. Primera inspección STPS pasada sin observaciones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 3: LOGÍSTICA -->
+<section style="padding: 100px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 03</span>
+      <span>logística &amp; CEDIs</span>
+      <span class="line"></span>
+      <span>caso · CPG bebidas</span>
+    </div>
+    <div class="section-head">
+      <span class="eyebrow">vertical 03 · logística</span>
+      <h2 class="display">CPG bebidas · <em>12 CEDIs · 3,200 empleados</em>.</h2>
+      <p class="lede">Operador CPG de bebidas con 12 centros de distribución distribuidos nacionalmente. Operación 24/7 con turnos rotativos, picos por temporada (Navidad, semana santa), exposición alta a horas extra. Workday como nómina enterprise.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px;">
+      <div class="head-quote">
+        <p class="q">"En temporada alta pagamos 30% más en OT que cualquier otro periodo. El problema era que no podíamos demostrar que cada peso de OT estaba justificado por una checada real."</p>
+        <div class="attr">— Director de Operaciones · CPG bebidas · 12 CEDIs</div>
+      </div>
+      <div class="mcc-grid">
+        <div class="mcc-card">
+          <div class="ix"><span class="num">A</span> situación previa</div>
+          <h4>Inspección STPS abierta</h4>
+          <p>Inspección STPS abierta desde 6 meses antes de empezar con MEDULAR. Multa potencial de $4.2M MXN bajo Art. 994 IV Bis. Equipo legal incapaz de presentar evidencia consolidada por estar repartida en 12 sistemas distintos.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">B</span> implementación</div>
+          <h4>Implementación de emergencia · 45 días</h4>
+          <p>Time-to-production reducido por urgencia legal. 6 CEDIs prioritarios primero (los inspeccionados), 6 restantes en fase 2. Push directo a Workday vía EIB. Vault NOM-151 con backfill histórico de 12 meses.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">C</span> producción</div>
+          <h4>12 CEDIs · 100% turnos cubiertos</h4>
+          <p>Conciliación quincenal automática. Reportes STPS-ready generados en menos de 5 minutos. MEDULAR AI usado por dirección operativa para anticipar exposición de OT por temporada.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">D</span> impacto medido</div>
+          <h4>Inspección cerrada · multa cero</h4>
+          <p>Inspección STPS cerrada favorablemente con evidencia hash-chained presentada. Reducción de 40% en exposición OT al detectar patrones operativos corregibles. Auditoría interna ahora se hace en 1 día (antes 2 semanas).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 4: AEROLÍNEAS (condensed) -->
+<section style="background: var(--bg-warm); padding: 100px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 04</span>
+      <span>aerolíneas</span>
+      <span class="line"></span>
+      <span>caso · aerolínea LATAM</span>
+    </div>
+    <div class="section-head">
+      <span class="eyebrow">vertical 04 · aerolíneas</span>
+      <h2 class="display">Aerolínea LATAM ULCC · <em>14 bases · 7,400 empleados</em>.</h2>
+      <p class="lede">Aerolínea low-cost con operaciones en 14 bases en México y LATAM. Tripulaciones, personal de rampa, mantenimiento, atención en mostrador. Operación 24/7 con regulaciones DGAC superpuestas a las laborales. SuccessFactors EC + Payroll como suite madre.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px;">
+      <div class="head-quote">
+        <p class="q">"La complejidad operativa de una aerolínea hace que cada base sea un microcosmos. Necesitábamos una capa que respetara las particularidades de cada base sin perder la visión consolidada."</p>
+        <div class="attr">— VP de Capital Humano · aerolínea LATAM ULCC</div>
+      </div>
+      <div class="mcc-grid">
+        <div class="mcc-card">
+          <div class="ix"><span class="num">A</span> situación previa</div>
+          <h4>Stack mosaico por base</h4>
+          <p>Cada base con su propio checador. Tripulaciones con marcaje móvil. Personal de rampa con biométrico. Mantenimiento con sistema heredado. Imposibilidad de auditoría operativa consolidada.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">B</span> implementación</div>
+          <h4>3 olas · 14 bases en 5 meses</h4>
+          <p>Ola 1: hub principal (3 bases) · 6 semanas. Ola 2: bases secundarias (6 bases) · 8 semanas. Ola 3: bases pequeñas (5 bases) · 6 semanas. App móvil custom para tripulaciones con geofence en aeropuertos.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">C</span> producción</div>
+          <h4>Visión consolidada · 14 bases</h4>
+          <p>SuccessFactors EC recibe incidencias conciliadas vía CPI. Reportes DGAC y STPS pre-armados. MEDULAR AI usado por operaciones para análisis ad-hoc de productividad por base y por turno.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">D</span> impacto medido</div>
+          <h4>Cumplimiento dual STPS + DGAC</h4>
+          <p>Por primera vez evidencia única que sirve para ambos reguladores. Auditoría DGAC anual pasada con observaciones menores (vs 14 observaciones el año anterior). Reducción de overhead administrativo por base del 60%.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 5: HOTELERÍA -->
+<section style="padding: 100px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 05</span>
+      <span>hotelería &amp; QSR</span>
+      <span class="line"></span>
+      <span>caso · cadena QSR nacional</span>
+    </div>
+    <div class="section-head">
+      <span class="eyebrow">vertical 05 · hotelería · QSR</span>
+      <h2 class="display">Cadena QSR · <em>380 unidades · 6,200 empleados</em>.</h2>
+      <p class="lede">Cadena de quick-service restaurants con 380 unidades. Empleados part-time, rotación muy alta, propina como variable compleja, múltiples turnos por día. CONTPAQi como nómina madre con outsourcing parcial. Hikvision como biométrico estándar por unidad.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px;">
+      <div class="head-quote">
+        <p class="q">"Con 380 unidades y rotación del 40%, conciliar a mano era inviable. La pregunta era si MEDULAR podía absorber el volumen sin que nuestro equipo necesitara crecer."</p>
+        <div class="attr">— Director de Operaciones · cadena QSR · 380 unidades</div>
+      </div>
+      <div class="mcc-grid">
+        <div class="mcc-card">
+          <div class="ix"><span class="num">A</span> situación previa</div>
+          <h4>Onboarding masivo no escalable</h4>
+          <p>120-150 ingresos mensuales por rotación. Onboarding al checador tomaba 3-5 días por persona. Empleados ya operando sin marcaje válido. Outsourcing de nómina cobraba por excepción manejada.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">B</span> implementación</div>
+          <h4>API masiva con CONTPAQi</h4>
+          <p>Integración profunda con CONTPAQi vía DB directa. Onboarding instantáneo: empleado nuevo en sistema se replica al checador en 5 minutos. Plantillas de turnos por unidad. App móvil para gerentes de unidad para aprobaciones.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">C</span> producción</div>
+          <h4>380 unidades · operación quincenal</h4>
+          <p>Conciliación quincenal totalmente automática. Excepciones a la unidad correspondiente vía mobile. Outsourcing de nómina ahora cobra tarifa fija (no por excepción) por bajo volumen de discrepancias.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">D</span> impacto medido</div>
+          <h4>Onboarding · 5 días → 5 minutos</h4>
+          <p>Eliminación de gap legal por marcaje retrasado en empleados nuevos. Ahorro de $1.2M MXN anuales en tarifa de outsourcing por reducción de excepciones. Cumplimiento Art. 132 XXXIV anticipado a 2026.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 6: SALUD/FINANCIERO (condensed) -->
+<section style="background: var(--bg-warm); padding: 100px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 06</span>
+      <span>salud &amp; financiero</span>
+      <span class="line"></span>
+      <span>caso · grupo hospitalario</span>
+    </div>
+    <div class="section-head">
+      <span class="eyebrow">vertical 06 · salud · financiero</span>
+      <h2 class="display">Grupo hospitalario · <em>14 sedes · 5,600 empleados</em>.</h2>
+      <p class="lede">Grupo hospitalario privado con 14 sedes. Personal médico, enfermería, administrativo, mantenimiento. Operación 24/7 con guardias, jornadas extendidas, sustituciones de último momento. Regulaciones COFEPRIS superpuestas. SAP HCM con módulo de salud customizado.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px;">
+      <div class="head-quote">
+        <p class="q">"Una enfermera que cubre una guardia de un colega que no llegó es un caso operativo común. Pero administrativamente era una pesadilla — quién aprobó la sustitución, cómo se pagaba, cómo se evidenciaba."</p>
+        <div class="attr">— Directora de Capital Humano · grupo hospitalario · 14 sedes</div>
+      </div>
+      <div class="mcc-grid">
+        <div class="mcc-card">
+          <div class="ix"><span class="num">A</span> situación previa</div>
+          <h4>Guardias y sustituciones sin trazabilidad</h4>
+          <p>Sustituciones de último momento documentadas en cuadernos físicos por cada turno. Imposibilidad de auditar quién cubrió a quién, por cuánto, y bajo qué autorización. Riesgo legal en juicios de despido injustificado.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">B</span> implementación</div>
+          <h4>Workflow de sustitución móvil</h4>
+          <p>App móvil de aprobación inmediata para supervisor de turno. Cada sustitución queda registrada con hash, timestamp, autorizador, motivo. Push automático a SAP HCM como incidencia tipificada con anexo de evidencia.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">C</span> producción</div>
+          <h4>14 sedes · workflows 24/7</h4>
+          <p>Operación productiva en las 14 sedes. Aprobaciones móviles sustituyen cuadernos físicos. Auditoría interna y externa con un solo clic. Cumplimiento COFEPRIS y STPS simultáneo.</p>
+        </div>
+        <div class="mcc-card">
+          <div class="ix"><span class="num">D</span> impacto medido</div>
+          <h4>Cero juicios sin evidencia · 12 meses</h4>
+          <p>Desde implementación: 8 juicios laborales recibidos. Los 8 resueltos a favor con evidencia hash-chained presentada. Reducción de 70% en disputas internas por sustituciones no documentadas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY ACROSS CASES -->
+<section style="padding: 100px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 07</span>
+      <span>patrones que se repiten</span>
+      <span class="line"></span>
+      <span>aprendizajes consolidados de cartera</span>
+    </div>
+    <div class="section-head">
+      <span class="eyebrow">no es magia</span>
+      <h2 class="display">Lo que aprendimos <em>operando para 6 sectores distintos</em>.</h2>
+      <p class="lede">No hay dos clientes iguales. Pero sí hay patrones que se repiten en todos los pilotos productivos. Estos son los seis aprendizajes que aplicamos sistemáticamente en cada nueva implementación.</p>
+    </div>
+    <div class="principles-grid" style="margin-top: 48px;">
+      <div class="principle">
+        <div class="ix">01</div>
+        <h4>Identity resolution determina todo</h4>
+        <p>El primer hito de cualquier piloto es resolver identidad cross-fuente. Si el empleado María González del checador no es el mismo que en la nómina, todo lo demás falla. <em>Dedicamos las primeras 2 semanas casi exclusivamente a esto.</em></p>
+      </div>
+      <div class="principle">
+        <div class="ix">02</div>
+        <h4>Conectividad &gt; checador</h4>
+        <p>La marca del checador casi nunca es el cuello de botella. La conectividad del sitio sí. <em>El edge collector con buffer local es la pieza más subestimada de la arquitectura</em>, pero sin ella, no hay cumplimiento real.</p>
+      </div>
+      <div class="principle">
+        <div class="ix">03</div>
+        <h4>El backfill histórico vale oro</h4>
+        <p>Casi todos los clientes piden cargar 12+ meses de histórico al vault. <em>Es el seguro contra juicios pendientes</em>. Lo que parecía pasado se vuelve evidencia futura. Diseñamos el ingestor para que esto sea posible siempre.</p>
+      </div>
+      <div class="principle">
+        <div class="ix">04</div>
+        <h4>El CHRO compra · el CIO valida</h4>
+        <p>El dolor lo siente RH. La decisión la firman ambos. <em>Ningún piloto avanza sin alineamiento real de CHRO y CIO desde el discovery</em>. Sin eso, el proyecto se atora en sprint 3.</p>
+      </div>
+      <div class="principle">
+        <div class="ix">05</div>
+        <h4>El piloto se mide en evidencia</h4>
+        <p>Un piloto exitoso no es "implementación entregada". Es <em>tener evidencia hash-chained de 12-16 quincenas conciliadas en el vault</em>. Eso es lo único que sostiene el negocio jurídico.</p>
+      </div>
+      <div class="principle">
+        <div class="ix">06</div>
+        <h4>MEDULAR AI cambia el juego en 60 días</h4>
+        <p>Los clientes que adoptan MEDULAR AI desde el inicio operan 3x más rápido. <em>El agente se convierte en el primer punto de contacto del CHRO con la data</em>, eliminando reportes manuales completos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding: 0 0 100px;">
+  <div class="container">
+    <div style="background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 12px; padding: 56px 48px; text-align: center; max-width: 720px; margin: 0 auto;">
+      <span class="eyebrow">¿reconoces tu situación?</span>
+      <h2 class="display" style="font-size: clamp(28px, 4vw, 40px); margin: 16px 0 20px;">Probablemente <em>somos para ti</em>.</h2>
+      <p style="color: var(--text-2); font-size: 16px; line-height: 1.6; max-width: 540px; margin: 0 auto 32px;">Si alguno de estos casos se parece al tuyo, agenda 30 minutos. Te decimos rápido si aplicamos y, si no, te recomendamos a alguien que sí.</p>
+      <a routerLink="/contacto" class="btn btn-primary">Agendar diagnóstico · 30 min <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>

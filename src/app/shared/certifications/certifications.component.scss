@@ -1,0 +1,85 @@
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.cert-card {
+  position: relative;
+  min-height: 190px;
+  padding: 28px 24px 24px;
+  border-radius: 6px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+.cert-card.is-vigente {
+  border-color: var(--acc);
+}
+
+.cert-card.is-roadmap {
+  border-style: dashed;
+  border-color: var(--border-3);
+}
+
+.cert-status {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-3);
+}
+
+.cert-card.is-vigente .cert-status {
+  background: var(--acc);
+  border-color: var(--acc);
+  color: white;
+}
+
+.cert-card .name {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.cert-card .desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-3);
+  margin-bottom: 18px;
+}
+
+.cert-card .date {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+}
+
+.cert-card.is-roadmap .date {
+  color: var(--amber);
+}
+
+@media (max-width: 980px) {
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+}

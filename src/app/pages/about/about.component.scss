@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .btn .arr {
+    flex-shrink: 0;
+  }
+}

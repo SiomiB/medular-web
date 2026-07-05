@@ -1,0 +1,311 @@
+<header class="hero-compact">
+  <div class="container">
+    <div class="breadcrumb">
+      <a routerLink="/">MEDULAR</a><span class="sep">/</span><span>Contacto</span>
+    </div>
+    <span class="eyebrow">diagnóstico ejecutivo · 30 minutos</span>
+    <h1 class="display">Cuéntanos tu stack.<br />Te decimos <em>si aplica</em>.</h1>
+    <p class="sub">No es un sales pitch. Es un diagnóstico ejecutivo con un arquitecto senior. Sales con un mapa de cumplimiento Art. 132 XXXIV específico a tu operación — independientemente de si trabajamos juntos o no.</p>
+  </div>
+</header>
+
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="form-wrap">
+      <div class="form-side">
+        <span class="eyebrow" style="color: var(--acc-3);">cómo trabajamos</span>
+        <h3>Sin presión.<br />Sin sales pitch.<br /><em>Solo señal pura.</em></h3>
+        <p>Te llamamos para 30 minutos de discovery, vemos qué tienes hoy, y volvemos con un análisis específico al stack que nos describas. No te mandamos un video genérico.</p>
+        <div class="form-promise">
+          <div class="item"><span><strong>Respuesta en &lt; 24 horas.</strong> Si no, te avisamos por qué.</span></div>
+          <div class="item"><span><strong>Sin NDA en el primer call.</strong> El diagnóstico es libre. El NDA aplica si decides avanzar a piloto.</span></div>
+          <div class="item"><span><strong>Sin marketing genérico.</strong> Solo trabajamos empresas de 500+ empleados con stack complejo.</span></div>
+          <div class="item"><span><strong>Sin minimums anuales.</strong> Empezamos con piloto pagado de 60-90 días.</span></div>
+          <div class="item"><span><strong>Sin retención forzada.</strong> Si decides no avanzar, no insistimos.</span></div>
+          <div class="item"><span><strong>Sin perseguirte.</strong> No vas a recibir secuencias automatizadas ni llamadas de SDRs.</span></div>
+        </div>
+      </div>
+
+      <form class="form-main" id="demoForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <p class="form-section-title">datos de contacto</p>
+
+        <div class="field-row cols-2">
+          <div class="field">
+            <label for="name">nombre completo <span class="req">*</span></label>
+            <input id="name" type="text" formControlName="name" />
+            @if (hasError('name')) {
+              <div class="error-msg">Escribe tu nombre completo.</div>
+            }
+          </div>
+          <div class="field">
+            <label for="role">puesto <span class="req">*</span></label>
+            <input id="role" type="text" formControlName="role" placeholder="CIO, CHRO, Director RH…" />
+            @if (hasError('role')) {
+              <div class="error-msg">Este campo es necesario para preparar el diagnóstico.</div>
+            }
+          </div>
+        </div>
+
+        <div class="field-row cols-2">
+          <div class="field">
+            <label for="company">empresa <span class="req">*</span></label>
+            <input id="company" type="text" formControlName="company" />
+            @if (hasError('company')) {
+              <div class="error-msg">Indica el nombre de tu empresa.</div>
+            }
+          </div>
+          <div class="field">
+            <label for="email">email corporativo <span class="req">*</span></label>
+            <input id="email" type="email" formControlName="email" placeholder="nombre&#64;empresa.com" />
+            @if (hasError('email')) {
+              <div class="error-msg">Usa un email válido, idealmente corporativo.</div>
+            }
+          </div>
+        </div>
+
+        <div class="field-row cols-2">
+          <div class="field">
+            <label for="phone">teléfono / celular</label>
+            <input id="phone" type="tel" formControlName="phone" placeholder="+52 ..." />
+          </div>
+          <div class="field">
+            <label for="sector">sector</label>
+            <select id="sector" formControlName="sector">
+              <option value="">selecciona…</option>
+              <option value="manufactura">Manufactura</option>
+              <option value="retail">Retail</option>
+              <option value="logistica">Logística / CEDIs</option>
+              <option value="aerolineas">Aerolíneas / Aeropuertos</option>
+              <option value="hoteleria">Hotelería / QSR</option>
+              <option value="salud">Salud</option>
+              <option value="financiero">Servicios financieros</option>
+              <option value="construccion">Construcción / Inmobiliario</option>
+              <option value="telecomunicaciones">Telecomunicaciones</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="form-section-title with-line">tamaño de operación</p>
+        <div class="field-row">
+          <div class="field">
+            <label>empleados activos <span class="req">*</span></label>
+            <div class="options">
+              <label class="opt"><input type="radio" formControlName="size" value="lt500" /><span class="box"></span><span class="lbl-txt">&lt; 500</span></label>
+              <label class="opt"><input type="radio" formControlName="size" value="500-2000" /><span class="box"></span><span class="lbl-txt">500 – 2,000</span></label>
+              <label class="opt"><input type="radio" formControlName="size" value="2000-10000" /><span class="box"></span><span class="lbl-txt">2,000 – 10,000</span></label>
+              <label class="opt"><input type="radio" formControlName="size" value="gt10000" /><span class="box"></span><span class="lbl-txt">&gt; 10,000</span></label>
+            </div>
+            @if (hasError('size')) {
+              <div class="error-msg">Selecciona el tamaño aproximado de tu plantilla.</div>
+            }
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>número de sitios operativos</label>
+            <div class="options">
+              <label class="opt"><input type="radio" formControlName="sites" value="1" /><span class="box"></span><span class="lbl-txt">1 sitio</span></label>
+              <label class="opt"><input type="radio" formControlName="sites" value="2-5" /><span class="box"></span><span class="lbl-txt">2 – 5</span></label>
+              <label class="opt"><input type="radio" formControlName="sites" value="6-20" /><span class="box"></span><span class="lbl-txt">6 – 20</span></label>
+              <label class="opt"><input type="radio" formControlName="sites" value="21-100" /><span class="box"></span><span class="lbl-txt">21 – 100</span></label>
+              <label class="opt"><input type="radio" formControlName="sites" value="gt100" /><span class="box"></span><span class="lbl-txt">&gt; 100</span></label>
+            </div>
+          </div>
+        </div>
+
+        <p class="form-section-title with-line">tu stack de checadores</p>
+        <div class="field-row">
+          <div class="field">
+            <label>marcas instaladas (todas las que apliquen)</label>
+            <div class="options tight">
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'zkteco')" (change)="toggleMulti('bio', 'zkteco', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">ZKTeco</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'suprema')" (change)="toggleMulti('bio', 'suprema', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Suprema</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'hikvision')" (change)="toggleMulti('bio', 'hikvision', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Hikvision</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'dahua')" (change)="toggleMulti('bio', 'dahua', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Dahua</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'anviz')" (change)="toggleMulti('bio', 'anviz', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Anviz</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'ibix')" (change)="toggleMulti('bio', 'ibix', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">IBIX</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'honeywell')" (change)="toggleMulti('bio', 'honeywell', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Honeywell</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'bosch')" (change)="toggleMulti('bio', 'bosch', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Bosch</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'kronos')" (change)="toggleMulti('bio', 'kronos', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Kronos/UKG</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'other')" (change)="toggleMulti('bio', 'other', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Otra</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'excel')" (change)="toggleMulti('bio', 'excel', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Excel manual</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('bio', 'ninguno')" (change)="toggleMulti('bio', 'ninguno', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Aún no tengo</span></label>
+            </div>
+          </div>
+        </div>
+
+        <p class="form-section-title with-line">tu nómina actual</p>
+        <div class="field-row">
+          <div class="field">
+            <label>software de nómina principal</label>
+            <div class="options tight">
+              <label class="opt"><input type="radio" formControlName="payroll" value="sap" /><span class="box"></span><span class="lbl-txt">SAP HCM</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="successfactors" /><span class="box"></span><span class="lbl-txt">SuccessFactors</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="workday" /><span class="box"></span><span class="lbl-txt">Workday</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="oracle" /><span class="box"></span><span class="lbl-txt">Oracle HCM</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="contpaqi" /><span class="box"></span><span class="lbl-txt">CONTPAQi</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="aspel" /><span class="box"></span><span class="lbl-txt">Aspel NOI</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="meta4" /><span class="box"></span><span class="lbl-txt">Meta4</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="adp" /><span class="box"></span><span class="lbl-txt">ADP</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="worky" /><span class="box"></span><span class="lbl-txt">Worky</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="buk" /><span class="box"></span><span class="lbl-txt">Buk</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="runa" /><span class="box"></span><span class="lbl-txt">Runa</span></label>
+              <label class="opt"><input type="radio" formControlName="payroll" value="other" /><span class="box"></span><span class="lbl-txt">Otro</span></label>
+            </div>
+          </div>
+        </div>
+
+        <p class="form-section-title with-line">tus dolores hoy</p>
+        <div class="field-row">
+          <div class="field">
+            <label>qué te tiene despierto (máximo 3)</label>
+            <div class="options">
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', 'consolidar')" (change)="toggleMulti('pain', 'consolidar', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">No puedo consolidar la data de mis checadores</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', 'cuadrar')" (change)="toggleMulti('pain', 'cuadrar', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Mi nómina no cuadra con la asistencia real</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', 'juicios')" (change)="toggleMulti('pain', 'juicios', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Tenemos juicios laborales por OT / faltas</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', 'evidencia')" (change)="toggleMulti('pain', 'evidencia', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">No tengo evidencia sólida para STPS</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', 'conectividad')" (change)="toggleMulti('pain', 'conectividad', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Sitios con conectividad mala</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', 'teletrabajo')" (change)="toggleMulti('pain', 'teletrabajo', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">Teletrabajo: no sé cómo registrarlo</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', 'manual')" (change)="toggleMulti('pain', 'manual', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">RH gasta días conciliando manualmente</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', '40h')" (change)="toggleMulti('pain', '40h', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">No sé si cumplo la reforma 40h</span></label>
+              <label class="opt"><input type="checkbox" [checked]="isSelected('pain', 'reportes')" (change)="toggleMulti('pain', 'reportes', $any($event.target).checked)" /><span class="box"></span><span class="lbl-txt">No tengo reportes STPS-ready</span></label>
+            </div>
+          </div>
+        </div>
+
+        <p class="form-section-title with-line">cuándo lo necesitas</p>
+        <div class="field-row">
+          <div class="field">
+            <div class="options">
+              <label class="opt"><input type="radio" formControlName="urgency" value="now" /><span class="box"></span><span class="lbl-txt">Hoy mismo · antes de enero 2027</span></label>
+              <label class="opt"><input type="radio" formControlName="urgency" value="q1q2" /><span class="box"></span><span class="lbl-txt">Q1 – Q2 2027</span></label>
+              <label class="opt"><input type="radio" formControlName="urgency" value="post" /><span class="box"></span><span class="lbl-txt">Después de la primera inspección</span></label>
+              <label class="opt"><input type="radio" formControlName="urgency" value="research" /><span class="box"></span><span class="lbl-txt">Solo estoy investigando</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row" style="margin-top: 24px;">
+          <div class="field">
+            <label for="notes">algo más que debamos saber (opcional)</label>
+            <textarea id="notes" formControlName="notes" placeholder="contexto adicional, dolencias específicas, restricciones tecnológicas, sindicato, casos específicos…"></textarea>
+          </div>
+        </div>
+
+        <div class="field-row consent-row">
+          <div class="field">
+            <label class="opt">
+              <input type="checkbox" formControlName="consent" />
+              <span class="box"></span>
+              <span class="lbl-txt">Acepto que MEDULAR procese estos datos para contactarme sobre el diagnóstico. No compartimos datos con terceros.</span>
+            </label>
+            @if (hasError('consent')) {
+              <div class="error-msg">Necesitamos tu consentimiento para enviar la solicitud.</div>
+            }
+          </div>
+        </div>
+
+        <div class="form-submit-row">
+          <span class="small">Te respondemos en menos de 24 horas. Al enviar aceptas que MEDULAR procese tus datos para contactarte sobre el diagnóstico. No los compartimos con terceros.</span>
+          <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+            @if (isSubmitting) {
+              Enviando solicitud…
+            } @else {
+              Enviar y agendar diagnóstico <span class="arr">→</span>
+            }
+          </button>
+        </div>
+
+        @if (submitStatus === 'success') {
+          <div class="form-success">
+            <strong>Solicitud recibida.</strong>
+            <span>Gracias. En menos de 24 horas un arquitecto de MEDULAR revisará tu caso y te contactará por correo.</span>
+          </div>
+        }
+
+        @if (submitStatus === 'error') {
+          <div class="form-error">
+            <strong>No pudimos enviar la solicitud.</strong>
+            <span>Inténtalo de nuevo en unos minutos o escríbenos directo a hola&#64;medular.com.mx.</span>
+          </div>
+        }
+      </form>
+    </div>
+  </div>
+</section>
+
+<section style="padding: 80px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 02</span>
+      <span>otros canales</span>
+      <span class="line"></span>
+      <span>si no te late el form</span>
+    </div>
+    <div class="mcc-grid">
+      <div class="mcc-card">
+        <div class="ix"><span class="num">&#64;</span> email directo</div>
+        <h4>hola&#64;medular.com.mx</h4>
+        <p>Si prefieres mandar un correo con tu contexto, lo respondemos personalmente. Generalmente entre 4 y 24 horas hábiles.</p>
+        <div class="tech">→ ideal para introducciones de tu CIO/CHRO</div>
+      </div>
+      <div class="mcc-card">
+        <div class="ix"><span class="num">in</span> linkedin</div>
+        <h4>linkedin.com/company/medular</h4>
+        <p>Conéctate con el equipo en LinkedIn. Compartimos contenido sobre la Reforma LFT 2027 y arquitecturas enterprise para cumplimiento.</p>
+        <div class="tech">→ próximamente · publicaciones técnicas</div>
+      </div>
+      <div class="mcc-card">
+        <div class="ix"><span class="num">→</span> intro vía red</div>
+        <h4>Si alguien te recomendó</h4>
+        <p>Si llegaste a MEDULAR por referencia, mencionalo en notas del formulario. Las introducciones por red suben automáticamente la prioridad de respuesta.</p>
+        <div class="tech">→ menciona quién te refirió en el campo notas</div>
+      </div>
+      <div class="mcc-card">
+        <div class="ix"><span class="num">!</span> emergencia legal</div>
+        <h4>¿Inspección activa STPS?</h4>
+        <p>Si ya tienes una inspección, requerimiento o juicio activo relacionado con asistencia/OT, llámanos. No prometemos magia, pero podemos ayudarte a estructurar la respuesta.</p>
+        <div class="tech">→ marca "urgente" en el subject del email</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--bg-warm); padding: 100px 0;">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 03</span>
+      <span>qué esperar del diagnóstico</span>
+      <span class="line"></span>
+      <span>el proceso completo</span>
+    </div>
+    <div class="section-head">
+      <span class="eyebrow">transparencia</span>
+      <h2 class="display">Lo que pasa <em>después</em> de que llenas el form.</h2>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="ix">paso 01 · &lt; 24 horas</div>
+        <h4>Acuse y triage</h4>
+        <p>Recibes confirmación por correo. Si tu perfil califica (500+ empleados, stack relevante), te proponemos 3 horarios para el diagnóstico esta misma semana o la siguiente.</p>
+      </div>
+      <div class="how-step">
+        <div class="ix">paso 02 · día del call</div>
+        <h4>Diagnóstico de 30 min</h4>
+        <p>Videollamada con un arquitecto senior de MEDULAR. Revisamos tu stack, identificamos gaps, y discutimos prioridades. Sin demo a menos que la pidas explícitamente.</p>
+      </div>
+      <div class="how-step">
+        <div class="ix">paso 03 · 3-5 días</div>
+        <h4>Documento de hallazgos</h4>
+        <p>Te enviamos por escrito: mapa de cumplimiento Art. 132 XXXIV específico, exposición estimada, recomendaciones priorizadas. Tuyo para usar — con o sin MEDULAR.</p>
+      </div>
+      <div class="how-step">
+        <div class="ix">paso 04 · si hace sentido</div>
+        <h4>Propuesta de piloto</h4>
+        <p>Si vemos fit mutuo, te enviamos propuesta de piloto pagado 60-90 días con alcance, entregables, precio fijo, y criterios de éxito. Tú decides si avanzar.</p>
+      </div>
+    </div>
+  </div>
+</section>

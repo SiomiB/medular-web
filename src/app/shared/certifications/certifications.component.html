@@ -1,0 +1,41 @@
+<section class="certs-section">
+  <div class="container">
+    <div class="article-rule">
+      <span class="num">§ 02</span>
+      <span>certificaciones &amp; cumplimiento</span>
+      <span class="line"></span>
+      <span>vigente · roadmap</span>
+    </div>
+
+    <div class="section-head">
+      <span class="eyebrow">no solo lo decimos</span>
+
+      <h2 class="display">
+        Lo que está <em>certificado</em>. Y lo que viene.
+      </h2>
+    </div>
+
+    <div class="certs-grid">
+      @for (certification of certifications; track certification.name) {
+        <article
+          class="cert-card"
+          [class.is-vigente]="certification.status === 'vigente'"
+          [class.is-roadmap]="certification.status === 'roadmap'"
+        >
+
+          <div class="name">
+            {{ certification.name }}
+          </div>
+
+          <div class="desc">
+            {{ certification.description }}
+          </div>
+
+          <div class="date">
+            {{ certification.date }}
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

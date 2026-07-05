@@ -1,0 +1,109 @@
+.flow-logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.flow-logo,
+.flow-more {
+  min-height: 34px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.flow-more {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-3);
+  background: var(--bg-warm);
+}
+
+.flow-logo.zkteco {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-style: italic;
+  color: #e2483d;
+  letter-spacing: -0.04em;
+}
+
+.flow-logo.suprema {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: #1e5ba8;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+}
+
+.flow-logo.hikvision {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: var(--text);
+  position: relative;
+  padding-left: 24px;
+}
+
+.flow-logo.hikvision::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #e2483d;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+}
+
+.flow-logo.dahua {
+  font-family: var(--sans);
+  font-weight: 800;
+  color: #e2702a;
+  font-size: 15px;
+}
+
+.flow-logo.sap {
+  font-family: var(--sans);
+  font-weight: 900;
+  background: #0faaff;
+  color: white;
+  letter-spacing: 0.12em;
+  border-color: #0faaff;
+}
+
+.flow-logo.sf {
+  font-family: var(--sans);
+  font-weight: 700;
+  color: #1e5ba8;
+}
+
+.flow-logo.workday {
+  font-family: var(--sans);
+  font-weight: 800;
+  color: #f39b3e;
+  font-size: 15px;
+}
+
+.flow-logo.contpaqi {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: #1e5ba8;
+}
+
+@media (max-width: 768px) {
+  .flow-logo-grid {
+    justify-content: center;
+  }
+
+  .flow-logo,
+  .flow-more {
+    font-size: 11px;
+    padding: 7px 9px;
+  }
+}

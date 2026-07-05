@@ -1,0 +1,33 @@
+.final-cta-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 56px 48px;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.final-cta-card h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  margin: 16px 0 20px;
+}
+
+.final-cta-card p {
+  color: var(--text-2);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 auto 32px;
+}
+
+@media (max-width: 768px) {
+  .final-cta-card {
+    padding: 36px 24px;
+  }
+
+  .final-cta-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

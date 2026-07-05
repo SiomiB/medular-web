@@ -1,0 +1,41 @@
+/* Integraciones reutiliza el design system global.
+   Estos ajustes solo protegen responsive y detalles del sprite local. */
+
+:host {
+  display: block;
+}
+
+svg[style*="display:none"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .logos-foot {
+    align-items: flex-start;
+  }
+
+  .logos-foot a {
+    width: 100%;
+  }
+
+  .mcc-card {
+    min-width: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .btn .arr {
+    flex-shrink: 0;
+  }
+}

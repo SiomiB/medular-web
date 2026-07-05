@@ -1,0 +1,15 @@
+.mechanics-section {
+  background: var(--bg-warm);
+}
+
+.mechanics-action {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .mechanics-action .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

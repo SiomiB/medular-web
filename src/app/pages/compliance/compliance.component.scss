@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-toggle button {
+    flex: 1 1 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .guide-block {
+    padding: 36px 24px;
+  }
+
+  .guide-form {
+    padding: 20px;
+  }
+
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .btn .arr {
+    flex-shrink: 0;
+  }
+}

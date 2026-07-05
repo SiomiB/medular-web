@@ -1,0 +1,15 @@
+.regulatory-timeline-section {
+  background: var(--bg-warm);
+}
+
+.timeline-action {
+  margin-top: 40px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .timeline-action .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

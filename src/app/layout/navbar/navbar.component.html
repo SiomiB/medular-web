@@ -1,0 +1,45 @@
+<nav class="topnav">
+  <div class="container nav-inner">
+    <a routerLink="/" class="brand">
+      <img
+        src="assets/brand/logo.png"
+        alt="MEDULAR"
+        class="brand-logo"
+      />
+    </a>
+
+    <div class="nav-links">
+      <a routerLink="/producto" routerLinkActive="active">Producto</a>
+      <a routerLink="/integraciones" routerLinkActive="active">Integraciones</a>
+      <a routerLink="/cumplimiento" routerLinkActive="active">Cumplimiento</a>
+      <a routerLink="/clientes" routerLinkActive="active">Clientes</a>
+      <a routerLink="/nosotros" routerLinkActive="active">Nosotros</a>
+    </div>
+
+    <a
+      routerLink="/contacto"
+      class="btn btn-primary btn-sm"
+    >
+      Solicitar diagnóstico
+      <span class="arr">→</span>
+    </a>
+
+    <button
+      class="nav-mobile-toggle"
+      type="button"
+      aria-label="Menú"
+      (click)="toggleMobileMenu()"
+    >
+      {{ isMobileMenuOpen ? 'Cerrar' : 'Menú' }}
+    </button>
+  </div>
+
+  <div class="nav-mobile container" [class.open]="isMobileMenuOpen">
+    <a routerLink="/producto" routerLinkActive="active" (click)="closeMobileMenu()">Producto</a>
+    <a routerLink="/integraciones" routerLinkActive="active" (click)="closeMobileMenu()">Integraciones</a>
+    <a routerLink="/cumplimiento" routerLinkActive="active" (click)="closeMobileMenu()">Cumplimiento</a>
+    <a routerLink="/clientes" routerLinkActive="active" (click)="closeMobileMenu()">Clientes</a>
+    <a routerLink="/nosotros" routerLinkActive="active" (click)="closeMobileMenu()">Nosotros</a>
+    <a routerLink="/contacto" routerLinkActive="active" (click)="closeMobileMenu()">Contacto</a>
+  </div>
+</nav>
