@@ -32,8 +32,6 @@ export class AnalyticsService {
     }
 
     this.loadGa4(ga4Id);
-    this.trackInitialPageView(ga4Id);
-    this.trackRouterPageViews(ga4Id);
 
     this.initialized = true;
   }
@@ -50,26 +48,24 @@ export class AnalyticsService {
   }
 
   private loadGa4(ga4Id: string): void {
-    const script = document.createElement('script');
+  const script = document.createElement('script');
 
-    script.async = true;
-    script.src =
-      `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
+  script.async = true;
+  script.src =
+    `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
 
-    document.head.appendChild(script);
+  document.head.appendChild(script);
 
-    window.dataLayer = window.dataLayer || [];
+  window.dataLayer = window.dataLayer || [];
 
-    window.gtag = function (...args: unknown[]): void {
-      window.dataLayer.push(args);
-    };
+  window.gtag = function (...args: unknown[]): void {
+    window.dataLayer.push(args);
+  };
 
-    window.gtag('js', new Date());
+  window.gtag('js', new Date());
 
-    window.gtag('config', ga4Id, {
-      send_page_view: false
-    });
-  }
+  window.gtag('config', ga4Id);
+}
 
   private trackInitialPageView(ga4Id: string): void {
     this.sendPageView(ga4Id, this.router.url);
