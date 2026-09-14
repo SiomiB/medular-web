@@ -25,13 +25,23 @@ export class AnalyticsService {
       return;
     }
 
-    this.loadGa4();
-    this.trackPageViews();
+    const ga4Id = environment.analytics.ga4Id;
+
+    if (!ga4Id) {
+      return;
+    }
+
+    this.loadGa4(ga4Id);
+    this.trackInitialPageView(ga4Id);
+    this.trackRouterPageViews(ga4Id);
 
     this.initialized = true;
   }
 
-  track(eventName: string, params: Record<string, unknown> = {}): void {
+  track(
+    eventName: string,
+    params: Record<string, unknown> = {}
+  ): void {
     if (!environment.production || !window.gtag) {
       return;
     }
@@ -39,16 +49,13 @@ export class AnalyticsService {
     window.gtag('event', eventName, params);
   }
 
-  private loadGa4(): void {
-    const ga4Id = environment.analytics.ga4Id;
-
-    if (!ga4Id) {
-      return;
-    }
-
+  private loadGa4(ga4Id: string): void {
     const script = document.createElement('script');
+
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
+    script.src =
+      `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`;
+
     document.head.appendChild(script);
 
     window.dataLayer = window.dataLayer || [];
@@ -58,26 +65,41 @@ export class AnalyticsService {
     };
 
     window.gtag('js', new Date());
+
     window.gtag('config', ga4Id, {
       send_page_view: false
     });
   }
 
-  private trackPageViews(): void {
-    const ga4Id = environment.analytics.ga4Id;
+  private trackInitialPageView(ga4Id: string): void {
+    this.sendPageView(ga4Id, this.router.url);
+  }
 
-    if (!ga4Id) {
-      return;
-    }
-
+  private trackRouterPageViews(ga4Id: string): void {
     this.router.events
-      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
+      .pipe(
+        filter(
+          (event): event is NavigationEnd =>
+            event instanceof NavigationEnd
+        )
+      )
       .subscribe((event) => {
-        window.gtag('config', ga4Id, {
-          page_path: event.urlAfterRedirects,
-          page_location: window.location.href,
-          page_title: document.title
-        });
+        this.sendPageView(
+          ga4Id,
+          event.urlAfterRedirects
+        );
       });
+  }
+
+  private sendPageView(
+    ga4Id: string,
+    path: string
+  ): void {
+    window.gtag('event', 'page_view', {
+      send_to: ga4Id,
+      page_path: path,
+      page_location: window.location.href,
+      page_title: document.title
+    });
   }
 }
